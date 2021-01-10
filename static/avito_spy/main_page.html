@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+          background: linear-gradient(to left,#f0f000,#00f0f0);
+          margin:auto;
+          width:40%;
+          height:100%;
+        }
+        table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+        }
+        th, td {
+          padding: 5px;
+          text-align: center;
+        }
+
+
+
+    </style>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="//unpkg.com/vue@latest/dist/vue.js"></script>
+    <title>Main page</title>
+</head>
+<body>
+<h1>Welcome to app!</h1>
+<div style="opacity:0.6;position:absolute;width:100%;height:100%;">
+    <!--img src="576adca00a46b155796dd12a.png" width="100%" height="100%"><!-->
+</div>
+
+<div id="table">
+    <table style="opacity:0.8;position:absolute;left:25%;width:50%;background-color:#40B3DF">
+        <tbody>
+        <tr>
+            <th colspan="2">
+                <button>
+                <a href="/static/avito_spy/add_target.html">Add new target</a>
+            </button>
+            </th>
+        </tr>
+        <tr v-for="target in targets">
+            <th>
+                {{target.title}}
+            </th>
+            <td>
+                {{target.wanted_price}}
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<script src="main_page.js"></script>
+</body>
+</html>
+

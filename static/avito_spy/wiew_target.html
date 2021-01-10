@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <style>
+            body {
+              background: linear-gradient(to left,#f0f000,#00f0f0);
+              margin:auto;
+              width:40%;
+              height:100%;
+            }
+            table, th, td {
+              border: 1px solid black;
+              border-collapse: collapse;
+            }
+            th, td {
+              padding: 5px;
+              text-align: center;
+            }
+        </style>
+        <title>Wiew target</title>
+    </head>
+    <body>
+        <h1>Wiew target</h1>
+        <a href="/main_page.html">
+            Main page
+        </a><br>
+        <p id="demo">JavaScript can change HTML content. Target title and Description.</p>
+        <button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'>Just button)))</button>
+        <p>Price which i want to pay</p>
+
+        <br>
+        <div style="opacity:0.6;width:40%;height:10%;bgcolor:#ff0000">
+           Graphic or dynamic of price
+        </div>
+        <br>
+        <table style="opacity:0.8;left:30%;width:40%;background-color:#40B3DF">
+          <tr>
+            <td>Target 1 link</td>
+          </tr>
+          <tr>
+            <td>Target 2 link</td>
+          </tr>
+          <tr>
+            <td>...</td>
+          </tr>
+        </table>
+        <script>
+        </script>
+    </body>
+</html>
