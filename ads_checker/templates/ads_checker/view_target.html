@@ -1,0 +1,27 @@
+{% extends 'ads_checker/frame.html' %}
+
+{% block title %}
+View target
+{% endblock %}
+
+{% block body %}
+<table style="opacity:0.8;position:absolute;left:30%;width:40%;background-color:#40B3DF">
+    <tbody>
+    <tr>
+        <th colspan="2">
+            {{target.title}}
+        </th>
+    </tr>
+    {% for ad in ads %}
+    <tr>
+        <th>
+            <a href="{{ad.link}}">{{ad.title}}</a>
+        </th>
+        <th>
+            {{ad.price}}
+        </th>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

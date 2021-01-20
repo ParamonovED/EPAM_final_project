@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+          background: linear-gradient(to left,#f0f000,#00f0f0);
+          margin:5px;
+          text-align:center;
+          width:99%;
+          height:100%;
+        }
+        table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+          margin:5px;
+        }
+        th, td {
+          padding: 5px;
+          text-align: center;
+        }
+        .form-control {
+            width:40%;
+            border: 1px solid #0f0f0f;
+            border-radius: .2rem;
+            margin:5px;
+            padding:5px;
+            }
+
+    </style>
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+<h1>Welcome to the Ads checker</h1>
+<button onclick="/">
+    <a style="position:relative;"
+       href="{% url 'ads_checker:main' %}">Main page</a>
+</button><br>
+<br>
+{% block body %}{% endblock %}
+{% load static %}
+
+<div style="opacity:0.5;position:absolute;left:60%;z-index: -1">
+    <img src="{% static 'ads_checker/jwpfws7fp-c3.png' %}" width="100%">
+</div>
+</body>
+
+</html>

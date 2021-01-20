@@ -1,0 +1,12 @@
+{% extends 'ads_checker/frame.html' %}
+
+{% block title %}Add target{% endblock %}
+
+{% block body %}
+<form method="post" style="margin:5">
+    {% csrf_token %}
+    <div>{{form.title}}<br></div>
+    {{form.wanted_price}}<br>
+    <input type="submit" value="Add target">
+</form>
+{% endblock %}
