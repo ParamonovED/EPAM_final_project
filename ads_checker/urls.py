@@ -7,4 +7,5 @@ urlpatterns = [
     path("add_target", views.add_target, name="add_target"),
     path("<int:target_id>/", views.view_target, name="view_target"),
     path("<int:target_id>/poll", views.poll, name="poll"),
+    path("<int:target_id>/del", views.delete_target, name="del"),
 ]

@@ -89,11 +89,11 @@ class TestDoAsyncRequest(TestCase):
         self.assertIn(
             mock.call(
                 'https://www.avito.ru',
-                params={'q': 'RTX 3080', 'pmin': None, 'pmax': None, 'p': 1}),
+                params={'q': 'RTX 3080', 'p': 1}),
             mock_get.call_args_list)
 
     @mock.patch('requests.get', side_effect=mocked_requests_get)
-    def badtest_DoAsyncRequest_object_can_do_async_request(self, mock_get):  # need more pages
+    def badtest_DoAsyncRequest_object_can_do_async_request(self, mock_get):  # need more parsed_pages
         do_request = DoAsyncRequest("https://www.avito.ru", "RTX 3080")
         do_request.async_request()
         resp = do_request.run_loop()

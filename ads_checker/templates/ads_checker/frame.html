@@ -9,7 +9,7 @@
           width:99%;
           height:100%;
         }
-        table, th, td {
+        button, table, th, td {
           border: 1px solid black;
           border-collapse: collapse;
           margin:5px;
@@ -31,12 +31,12 @@
 </head>
 <body>
 <h1>Welcome to the Ads checker</h1>
-<button onclick="/">
-    <a style="position:relative;"
-       href="{% url 'ads_checker:main' %}">Main page</a>
+<button style="padding: 5px;" onclick="/">
+    <a href="{% url 'ads_checker:main' %}">Main page</a>
 </button><br>
-<br>
+
 {% block body %}{% endblock %}
+
 {% load static %}
 
 <div style="opacity:0.5;position:absolute;left:60%;z-index: -1">

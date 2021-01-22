@@ -1,4 +1,4 @@
-from .models import Target, Ad
+from .models import Target
 from django.forms import ModelForm, Textarea, NumberInput
 
 
@@ -19,9 +19,3 @@ class TargetForm(ModelForm):
                 "placeholder": "Wanted price"
             })
         }
-
-
-# class UpdateTargetForm(ModelForm):
-#     class Meta:
-#         model = Ad
-#         fields = ["target"]

@@ -8,8 +8,14 @@ View target
 <table style="opacity:0.8;position:absolute;left:30%;width:40%;background-color:#40B3DF">
     <tbody>
     <tr>
-        <th colspan="2">
+        <th style="border:0px;" colspan="1">
             {{target.title}}
+        </th>
+        <th style="border:0px;">
+            <form method="post" action="{% url 'ads_checker:del' target.id %}" style="margin:5">
+                {% csrf_token %}
+                <input type="submit" id="{target.id}" value="Delete target">
+            </form>
         </th>
     </tr>
     {% for ad in ads %}

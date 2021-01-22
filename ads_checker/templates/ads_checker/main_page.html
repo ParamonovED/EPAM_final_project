@@ -9,10 +9,33 @@ Main page
 <table style="opacity:0.8;position:absolute;left:30%;width:40%;background-color:#40B3DF">
     <tbody>
     <tr>
-        <th colspan="3">
+        <th colspan="7">
             <button>
                 <a href="{% url 'ads_checker:add_target' %}">Add new target</a>
             </button>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            Target name
+        </th>
+        <th>
+            Wanted price
+        </th>
+        <th>
+            Total ads
+        </th>
+        <th>
+            Average price
+        </th>
+        <th>
+            Price difference
+        </th>
+        <th>
+            Price dynamic
+        </th>
+        <th>
+
         </th>
     </tr>
     {% for target in targets %}
@@ -24,12 +47,21 @@ Main page
             {{target.wanted_price}}
         </th>
         <th>
-<!--            <button>-->
-<!--                <a href="/poll">Update</a>-->
-<!--            </button>-->
+            {{target.active_ads}}
+        </th>
+        <th>
+            {{target.average_price}}
+        </th>
+        <th>
+            {{target.price_difference}}
+        </th>
+        <th>
+            {{target.dynamic}}
+        </th>
+        <th>
             <form method="post" action="{% url 'ads_checker:poll' target.id %}" style="margin:5">
                 {% csrf_token %}
-                <input type="submit" id="{target.id}" value="Update info">
+                <input type="submit" id="{target.id}" value="Update">
             </form>
         </th>
     </tr>
