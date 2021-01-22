@@ -4,12 +4,9 @@ import aiohttp
 
 from bs4 import BeautifulSoup
 
-from ads_checker.models import Target
-
 
 def parser(page):  # ResponseObject --> BeautifulSoupObject
-    parsed_page = BeautifulSoup(page, "html.parser")
-    return parsed_page
+    return BeautifulSoup(page, "html.parser")
 
 
 async def request(url, title, shop_object, paginator=1):  # url --> ResponseObject
