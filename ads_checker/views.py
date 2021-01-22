@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 from django import db
 from .forms import TargetForm
 from .models import Target, Ad

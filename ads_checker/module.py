@@ -32,7 +32,6 @@ async def async_request(url, title, finder_last_page,
 
 def run_loop(url, title, finder_last_page, shop_object):
     asyncio.run(async_request(url, title, finder_last_page, shop_object))
-    # return response_objects
 
 
 class EbayGetTarget:
@@ -77,9 +76,7 @@ class AvitoGetTarget:
 
     def fill_target_fields(self, info):
         avg = round(sum([int(ad[2][:-2].replace(" ", "")) for ad in info]) / len(info))
-        print("info", avg)
         if self.average_price != avg and self.average_price is not None:
             self.dyn_average_price = avg - self.average_price
-            print("ggg")
         self.average_price = avg
         self.price_difference = self.target.wanted_price - self.average_price
